@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import faker from "@faker-js/faker";
+import Image from 'next/image'
 
 const Suggestions = () => {
     const [suggestions, setSuggestions] = useState([]);
@@ -25,7 +26,7 @@ const Suggestions = () => {
                 <div
                     key={profile.id}
                     className='flex items-center justify-between mt-3'>
-                        <img src={profile.avatar}
+                        <Image src={profile.avatar}
                         className='w-10 h-10 rounded-full border p-[2px]' alt="" />
 
                         <div className="flex-auto ml-4 mr-6">

@@ -1,5 +1,6 @@
 import { getProviders, signIn } from 'next-auth/react'
 import Header from '../../components/Header';
+import Image from 'next/image'
 
 // Browser
 const SignIn = ({ providers }) => {
@@ -8,8 +9,8 @@ const SignIn = ({ providers }) => {
     <Header />
 
 <div className='flex flex-col items-center justify-center min-h-screen py-2 -mt-16 px-14 text-center'>
-  <img className='w-80' src="/instafont.png" alt="" />
-  <p className='font-xs italic'>This is the world's largest photo & video sharing social networking app!</p>
+  <Image className='w-80' src="/instafont.png" alt="" />
+  <p className='font-xs italic'>This is the world largest photo & video sharing social networking app!</p>
 <div className="mt-20">
     {Object.values(providers).map((provider) => (
         <div key={provider.name}>

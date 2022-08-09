@@ -26,7 +26,7 @@ const Header = () => {
           {/* Left - logo */}
           <div onClick={() => router.push('/')}
           className='relative hidden lg:inline-grid w-24 h-16 cursor-pointer'>
-            <Image src="/instafont.png" layout="fill" objectFit="contain" />
+            <Image src="/instafont.png" layout="fill" objectFit="contain" alt=""/>
           </div>
 
           <div onClick={() => router.push('/')} 

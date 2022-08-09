@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { useRecoilState } from "recoil"
 import { modalState } from "../atoms/modalAtom";
 import { Dialog, Transition } from "@headlessui/react";
@@ -94,7 +95,7 @@ function Modal() {
 
                                 <div>
                                     {selectedFile ? (
-                                        <img src={selectedFile} onClick={() => setSelectedFile()} alt="" />
+                                        <Image src={selectedFile} onClick={() => setSelectedFile()} alt="" />
                                     ) : (
                                         <div onClick={() => filePickerRef.current.click()}
                                             className='mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100 cursor-pointer'
