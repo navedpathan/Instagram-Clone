@@ -15,7 +15,7 @@ export default NextAuth({
   ],
 
   pages: {
-    signIn: 'https://instagram-clone-beta-sandy.vercel.app/api/auth/signin'
+    signIn: '/auth/signin'
   },
   callbacks: {
     async session({ session, token, user }) {
