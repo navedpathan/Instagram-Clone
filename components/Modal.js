@@ -95,7 +95,7 @@ function Modal() {
 
                                 <div>
                                     {selectedFile ? (
-                                        <Image src={selectedFile} onClick={() => setSelectedFile()} alt="" />
+                                        <Image src={selectedFile} onClick={() => setSelectedFile()} height='150' width='350' alt="" />
                                     ) : (
                                         <div onClick={() => filePickerRef.current.click()}
                                             className='mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100 cursor-pointer'

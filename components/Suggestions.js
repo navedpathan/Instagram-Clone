@@ -27,7 +27,7 @@ const Suggestions = () => {
                     key={profile.id}
                     className='flex items-center justify-between mt-3'>
                         <Image src={profile.avatar}
-                        className='w-10 h-10 rounded-full border p-[2px]' alt="" />
+                        className='w-10 h-10 rounded-full border p-[2px]' height='40' width='40' alt="" />
 
                         <div className="flex-auto ml-4 mr-6">
                             <h2 className="font-semibold text-sm">{profile.username}</h2>

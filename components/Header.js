@@ -25,13 +25,13 @@ const Header = () => {
 
           {/* Left - logo */}
           <div onClick={() => router.push('/')}
-          className='relative hidden lg:inline-grid w-24 h-16 cursor-pointer'>
-            <Image src="/instafont.png" layout="fill" objectFit="contain" alt=""/>
+            className='relative hidden lg:inline-grid w-24 h-16 cursor-pointer'>
+            <Image src="/instafont.png" layout="fill" objectFit="contain" alt="" />
           </div>
 
-          <div onClick={() => router.push('/')} 
-          className='relative w-10 h-10 flex inset-y-3 lg:hidden flex-shrink-0 cursor-pointer'>
-            <Image src="/instablack.png" layout="fill" objectFit="contain" />
+          <div onClick={() => router.push('/')}
+            className='relative w-10 h-10 flex inset-y-3 lg:hidden flex-shrink-0 cursor-pointer'>
+            <Image src="/instablack.png" layout="fill" objectFit="contain" alt="" />
           </div>
 
           {/* Middle - search input field */}
@@ -53,17 +53,19 @@ const Header = () => {
               <>
                 <div className="relative navBtn">
                   <PaperAirplaneIcon className="navBtn rotate-45" />
-                  {/* <div className="relative bottom-2 right-8 text-xs w-6 p-1 bg-red-500 rounded-full flex items-center justify-center animate-pulse text-white">24</div> */}
+
                   <div className="absolute -top-1 -right-2 text-xs w-5 h-5 bg-red-500 rounded-full flex items-center justify-center animate-pulse text-white">24</div>
-                  </div>
+                </div>
                 <PlusCircleIcon onClick={() => setOpen(true)} className="navBtn" />
                 <UserGroupIcon className="navBtn" />
                 <HeartIcon className="navBtn" />
-
-                <img
-                  onClick={signOut}
-                  src={session.user.image}
-                  alt="profilepic" layout="fill" className="h-10 w-10 rounded-full cursor-pointer" />
+                <div className="flex items-center">
+                  <Image
+                    onClick={signOut}
+                    src={session.user.image}
+                    className="rounded-full cursor-pointer"
+                    alt="profilepic" height='30' width='30' />
+                </div>
               </>
             ) : (
               <button onClick={signIn}>Sign In</button>
@@ -71,7 +73,6 @@ const Header = () => {
 
 
           </div>
-
         </div>
       </div>
     </>

@@ -9,7 +9,7 @@ const SignIn = ({ providers }) => {
     <Header />
 
 <div className='flex flex-col items-center justify-center min-h-screen py-2 -mt-16 px-14 text-center'>
-  <Image className='w-80' src="/instafont.png" alt="" />
+  <Image className='w-80' src="/instafont.png" height='80' width='150' alt="" />
   <p className='font-xs italic'>This is the world largest photo & video sharing social networking app!</p>
 <div className="mt-20">
     {Object.values(providers).map((provider) => (

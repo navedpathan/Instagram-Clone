@@ -72,13 +72,13 @@ function Post({ id, username, userImg, img, caption }) {
         
         {/* Header */}
         <div className='flex items-center p-3'>
-            <Image src={userImg}className='rounded-full h-12 w-12 object-contain border p-1 mr-3' alt="" />
+            <img src={userImg} className='rounded-full h-12 w-12 object-contain border p-1 mr-3' alt="" />
             <p className='flex-auto font-bold'>{username}</p>
             <DotsHorizontalIcon className='h-5'/>
         </div>
 
         {/* img */}
-        <Image src={img} className='object-cover w-full' alt="Loading..." />
+        <img src={img} className='object-cover w-full' alt="Loading..." />
 
         {/* Buttons */}
         {session && (
@@ -113,7 +113,7 @@ function Post({ id, username, userImg, img, caption }) {
           <div className='ml-10 h-20 overflow-y-scroll scrollbar-thumb-black scrollbar-thin mt-4'>
             {comments.map((comment) => (
               <div key={comment.id} className='flex items-center space-x-2 mb-3'>
-                <Image src={comment.data().userImage} className='h-7 rounded-full' alt="" />
+                <img src={comment.data().userImage} className='h-7 rounded-full' alt="" />
                 <p className='text-sm flex-1'>
                   <span className='font-bold mr-1'>{comment.data().username}</span>{comment.data().comment}
                 </p>
