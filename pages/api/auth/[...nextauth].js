@@ -14,12 +14,12 @@ export default NextAuth({
     // ...add more providers here
   ],
 
-  secret: "test",
-  jwt: {
-    secret: "test",
-    encryption: true,
-    maxAge: 5 * 60,
-  },
+  // secret: "test",
+  // jwt: {
+  //   secret: "test",
+  //   encryption: true,
+  //   maxAge: 5 * 60,
+  // },
   pages: {
     signIn: '/auth/signin'
   },
