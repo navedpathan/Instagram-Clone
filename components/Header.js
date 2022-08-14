@@ -29,7 +29,7 @@ const Header = () => {
           </div>
 
           <div onClick={() => router.push('/')}
-            className='relative top-0 py-6 sm:top-2 h-8 w-8 sm:h-10 sm:w-10 flex inset-y-3 lg:hidden flex-shrink-0 cursor-pointer'>
+            className='relative top-0 mr-6 py-6 sm:top-2 h-8 w-8 sm:h-10 sm:w-10 flex inset-y-3 lg:hidden flex-shrink-0 cursor-pointer'>
             <Image src="/instablack.png" layout="fill" objectFit="contain" alt="" />
           </div>
 
