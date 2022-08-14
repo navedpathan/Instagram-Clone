@@ -5,7 +5,6 @@ import {
   UserGroupIcon,
   HeartIcon,
   PaperAirplaneIcon,
-  MenuIcon,
 } from '@heroicons/react/outline';
 import { HomeIcon } from "@heroicons/react/solid";
 import { signIn, signOut, useSession } from "next-auth/react";
@@ -30,27 +29,27 @@ const Header = () => {
           </div>
 
           <div onClick={() => router.push('/')}
-            className='relative w-10 h-10 flex inset-y-3 lg:hidden flex-shrink-0 cursor-pointer'>
+            className='relative top-0 py-6 sm:top-2 h-8 w-8 sm:h-10 sm:w-10 flex inset-y-3 lg:hidden flex-shrink-0 cursor-pointer'>
             <Image src="/instablack.png" layout="fill" objectFit="contain" alt="" />
           </div>
 
           {/* Middle - search input field */}
-          <div className="relative mt-1 p-3 rounded-md">
+          <div className="hidden sm:block relative mt-1 p-3 rounded-md">
             <div className="absolute inset-y-5 pl-4 flex pointer-events-none">
               <SearchIcon className="h-4 w-4 text-gray-500" />
             </div>
             <input
-              className="bg-gray-50 block w-full pl-10 sm:text-sm py-1 rounded-md focus:ring-black focus:border-black"
+              className="bg-gray-50 w-full pl-10 sm:text-sm py-1 rounded-md focus:ring-black focus:border-black"
               type="text" placeholder="Search" />
           </div>
 
           {/* Right */}
           <div className="flex items-center justify-end space-x-4">
             <HomeIcon onClick={() => router.push('/')} className="navBtn" />
-            <MenuIcon className="h-10 v-10 md:hidden cursor-pointer" />
 
             {session ? (
               <>
+                <SearchIcon className="navBtn sm:hidden" />
                 <div className="relative navBtn">
                   <PaperAirplaneIcon className="navBtn rotate-45" />
 
