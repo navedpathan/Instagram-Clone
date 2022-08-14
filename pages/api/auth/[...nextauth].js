@@ -18,7 +18,6 @@ export default NextAuth({
   jwt: {
     secret: process.env.NEXTAUTH_SECRET,
     encryption: true,
-    // maxAge: 5 * 60,
   },
   pages: {
     signIn: '/auth/signin'
