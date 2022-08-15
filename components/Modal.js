@@ -65,7 +65,7 @@ function Modal() {
                     as='div'
                     className='fixed z-10 inset-0 overflow-y-auto'
                     onClose={setOpen}>
-                    <div className="flex items-end justify-center min-h-[800px] sm:min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                    <div className="flex items-end justify-center min-h-[800px] sm:min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0 relative top-32 sm:top-0">
                         <Transition.Child
                             as={Fragment}
                             enter="ease-out duration-300"
@@ -80,7 +80,7 @@ function Modal() {
 
                         {/* This is element is to trick the browser into centering the modal contents. */}
                         <span
-                            className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden='true'>&#8203;</span>
+                            className="hidden sm:inline-block align-middle h-screen" aria-hidden='true'>&#8203;</span>
 
                         <Transition.Child
                             as={Fragment}
